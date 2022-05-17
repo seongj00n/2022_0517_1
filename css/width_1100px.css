@@ -1,0 +1,300 @@
+@charset "utf-8";
+@media (min-width:1100px){
+/*****header*****/
+header {width:100%; height:100px; background-color:rgb(255, 255, 255);
+margin:0 auto; position: fixed; z-index:1; opacity:0.9; }
+.b {width:40%; height:auto; background-color: rgb(255, 255, 255); }
+.navbox1 {width:100%; height:auto; margin:0 auto; display:flex; align-items:center;
+     flex-flow:row wrap; justify-content: space-evenly; background-color: rgb(255, 255, 255);}
+.b > ul {display: flex; flex-flow:row wrap; align-items: center; }
+.b > ul > li > a {text-decoration: none; color:#000; display:flex; font-size:18px;
+     align-items:center; flex-flow:row  wrap; width:100%; height:auto; margin:0 0 0 40px;} 
+.b > ul > li > a:hover {color:rgb(105, 0, 105); background-color:#fff; }
+.logo {width: 250px; height:100px;  }
+.logo > img {width:100%; height:100%; }
+.logo > .a {width:50px; height:50px; }
+.c {width:100px; height:80px; display:flex; align-items:center; justify-content: space-around; }
+.icon {width:30px; height:30px; display:flex; }
+.icon > img {width:100%; height:100%; }
+.icon > img:hover {cursor: pointer;}
+
+.a {display:none; }
+.b {display:block; }
+
+
+/*****slider*****/    
+#slider {width:100%; height:1000px; position: relative; background-image: url("../img/main_slide_02.jpg"); background-attachment: fixed; background-size:cover; }
+#slider > img {width:100%; height:100%;}
+.slibox {width:100%; height:auto; margin:200px auto 0px; position: absolute;}
+.textt {width:100%; height:200px; margin:170px auto;} 
+.textt > h1 {text-align: center; margin:0px auto 0px; font-size: 100px; color:#fff;}  
+.textt > p {text-align: center; margin:0px auto 0px; font-size: 15px; color:#fff;}
+
+/*****main*****/
+main {width:100%; height:auto; background-color:rgb(255, 218, 218);}
+
+/*art박스*/
+#artbox {width:90%; height:auto; margin:0 auto; } 
+#artbox1 {width:100%; height:auto;  margin:0 auto 0px; }
+#artbox1 > h1 {text-align: center; font-size:55px; color: #fff;}
+#artbox1 > p {text-align: center; font-size:13px; color: rgb(150, 150, 150);}
+#artmum {width:100%; height:auto;  display:flex; flex-flow:row wrap; justify-content: center; align-items: center;}    
+#artbox2 {width:15%; height:auto;  display:flex; flex-direction: column; margin:100px 0 0 0px; }    
+#artbox3 {width:70%; height:auto; margin:3px auto; border-radius: 200px; overflow: hidden; }    
+#artbox3 > img {width:100%; height:100%; }
+#artbox3 > img:hover {opacity: 0.9; transition:all 0.5s; transform:scale(1.12);}
+#artbutton {width:50%; height:auto;  margin:50px auto;} 
+#artbutton > button {width:100%; height:100%;  border:0; font-size:12px; padding:10px; border-radius:10px; background-color: #fff;}
+#artbutton > button:hover {background-color: black; color:#fff; transform: scale(1.02); transition:all 0.5s; cursor: pointer;} 
+
+/*가수 프로필 박스*/
+#textbox {width:100%; height:300px;  margin:100px auto; }   
+#textbox > h1 {text-align:center; margin:0px auto; font-size: 55px; color:#fff;}
+#textbox > p {text-align:center; margin:0px auto; font-size:13px; margin:15px; color:rgb(150, 150, 150);}
+
+#mainbox {width:90%; height:1600px; margin:-300px auto;  display:flex; justify-content:center; flex-direction:column; }
+#boxbox {width:100%; height:800px; margin:0 auto; display:flex; align-items: center; justify-content: space-around; }
+#boxbox1 {width:100%; height:800px; margin:0 auto;  display:flex; align-items: center; justify-content: space-around; }
+
+.showbox1 {width:400px; height:600px;  border-radius:40px; 
+overflow:hidden; margin:10px; box-shadow: 4px 4px 4px rgb(255, 176, 176); background-color: #fff;}
+.showbox1 > a > img {width:100%; height:400px; }
+.showbox2 {width:400px; height:600px;  border-radius:40px;
+overflow:hidden; margin:10px; box-shadow: 4px 4px 4px rgb(255, 176, 176); background-color: #fff;}
+.showbox2 > a > img {width:100%; height:400px; }
+
+.showbox1 > a > img:hover {transition:all 0.5s; opacity: 0.8; transform: scale(1.10);}
+.showbox1 > h3 {margin:100px 0 0 30px; font-size: 25px; color:rgb(69, 19, 116);}
+.showbox1 > p {margin:0px 0 0 30px; font-size: 13px; color: rgb(150, 150, 150);}
+
+.showbox2 > a > img:hover {transition:all 0.5s; opacity: 0.8; transform: scale(1.10);}
+.showbox2 > h3 {margin:100px 0 0 30px; font-size: 25px; color:rgb(69, 19, 116);}
+.showbox2 > p {margin:0px 0 0 30px; font-size: 13px; color: rgb(150, 150, 150);}
+
+#buttonbox {width:200px; height:50px; margin:250px auto; }
+#buttonbox > button {width:100%; height:100%; font-size: 17px; box-shadow: 4px 4px 4px rgb(255, 176, 176);
+    border-radius: 20px; color:rgb(0, 0, 0);  border: 0; background-color: rgb(255, 255, 255);} 
+#buttonbox > button:hover {transition:all 0.5s; opacity: 0.9; transform: scale(1.10); cursor: pointer;}
+
+/*시계박스*/
+#mainbox2 {width:100%; height:auto; }
+#linkbox {width:100%; height:auto;  margin:0px auto;  }
+#linkbox > h1 {text-align: center; font-size: 170px; margin:0 auto; opacity: 0.5; color:#fff}
+#number {width:90%; height:auto; background-color: rgb(255, 235, 240);
+    margin:100px auto; border-radius: 20px; box-shadow: 4px 4px 4px rgb(255, 192, 192); display:flex;  flex-flow:row; align-items: center; justify-content: space-evenly;} 
+#numbox {width:20%; height:auto;  display: inline-block; margin:70px 0 70px 0px ; }
+#numbox > h2 {text-align: center; font-size:70px ; margin:0px auto; color:rgb(69, 19, 116);} 
+#numbox > p {text-align: center; font-size:20px ; margin:0px auto; color: rgb(191, 128, 250);}
+
+/*티켓박스*/
+#tikboxname {width:100%; height:auto;  display:flex; 
+align-items:center; flex-direction: column;  margin:60px 0 0px 0px; }   
+#tikboxname > h1 {text-align: center; font-size:55px; color:#fff;}
+#tikboxname > p {text-align: center; font-size:13px; color: rgb(150, 150, 150);}    
+#tikbox {width:50%; height:1100px;  margin:30px auto;}
+#tikbox > h1 {text-align: center; font-size:55px; color: rgb(69, 19, 116);}
+#tikbox > p {text-align: center; font-size:13px; color: rgb(150, 150, 150);}
+
+#tikbox1 {width:95%; height:auto;  margin:0 auto; background-color: rgb(255, 241, 253);
+    border-radius: 30px; opacity: 0.9; box-shadow: 4px 4px 4px rgb(255, 192, 192); display:flex; flex-direction: column;}
+#tikbox2 {width:100%; height:auto;  margin:40px auto 30px; display:flex; justify-content: space-around;} 
+
+#tiname1 {width:20%; height:75px;  }
+#tiname1 > h2 {margin:0 auto; text-align: center;}
+#tiname2 > h3 {margin:0 auto; text-align: center; }
+#tiname2 > h5 {margin:0 auto; text-align: center; color:rgb(150, 150, 150);} 
+#tiname3 > button {width:70%; height:50%; border: 0; border-radius: 35px; font-size: 15px; box-shadow: 2px 2px 2px rgb(255, 209, 216); background-color: #fff;} 
+#tiname3 > button:hover { opacity: 0.9; transition:all 0.5s;  transform: scale(1.02);
+     box-shadow: 4px 4px 4px rgb(255, 189, 189); cursor: pointer;}
+
+#tiname2 {width:42%; height:75px; }    
+#tiname3 {width:30%; height:75px; }    
+
+/*흐릿한 이미지 박스*/
+
+#subbox {width:100%; height:auto; margin:0px auto; }
+#subbox1 {width:100%; height:auto;  margin:0 auto;  display:flex; flex-flow:row ; }   
+
+#liibox0 {width:95%; height:930px;  margin:10px; display:flex;  flex-flow:row wrap;}  
+#liibox {width:45%; height:930px;  margin:10px; display:flex;  display:flex; flex-flow:row; }
+
+#liibox1 {width:50%; height:450px;   margin:10px 0 0 0px;  display:flex; flex-flow:row wrap; } 
+#liibox2 {width:100%; height:930px; display:flex; flex-direction: column; }    
+
+#opabox1 {width:45%; height:450px; border-radius: 20px; overflow: hidden; margin:10px; }
+#opabox2 {width:45%; height:450px; border-radius: 20px; overflow: hidden; margin:10px;}
+#opabox3 {width:93%; height:450px; border-radius: 20px; overflow: hidden; margin:10px;}
+
+#opabox4 {width:100%; height:910px; border-radius: 20px; overflow: hidden; margin:10px;}
+#opabox5 {width:96%; height:450px; border-radius: 20px; overflow: hidden; margin:10px;}
+#opabox6 {width:96%; height:450px; border-radius: 20px; overflow: hidden; margin:10px;}
+    
+#opabox1 > img {width:100%; height:100%;}
+#opabox2 > img {width:100%; height:100%;}
+#opabox3 > img {width:100%; height:100%;}
+#opabox4 > img {width:100%; height:100%;}
+#opabox5 > img {width:100%; height:100%;}
+#opabox6 > img {width:100%; height:100%;}
+
+#opabox1 > img:hover {opacity: 0.7; transition:all 0.5s;}
+#opabox2 > img:hover {opacity: 0.7; transition:all 0.5s;}
+#opabox3 > img:hover {opacity: 0.7; transition:all 0.5s;}
+#opabox4 > img:hover {opacity: 0.7; transition:all 0.5s;}
+#opabox5 > img:hover {opacity: 0.7; transition:all 0.5s;}
+#opabox6 > img:hover {opacity: 0.7; transition:all 0.5s;}
+
+#opabox1:hover #text11 {opacity:1; transition:all 1s ; backdrop-filter: blur(8px);}
+#opabox2:hover #text11 {opacity:1; transition:all 1s ; backdrop-filter: blur(8px);}
+#opabox3:hover #text11 {opacity:1; transition:all 1s ; backdrop-filter: blur(8px);}
+#opabox4:hover #text11 {opacity:1; transition:all 1s ; backdrop-filter: blur(8px);}
+#opabox5:hover #text11 {opacity:1; transition:all 1s ; backdrop-filter: blur(8px);}
+#opabox6:hover #text11 {opacity:1; transition:all 1s ; backdrop-filter: blur(8px);}
+
+#text11 > h3 {font-size:25px; }
+
+#text11 {width:100%; height:100%;  position: relative; left:0; bottom:100%; padding:10px; color:#fff; display:flex; flex-direction: column; justify-content: center;}
+#text11 {opacity:0;}
+
+/*음원 차트 박스*/  
+
+#musbox {width:100%; height:auto;  margin:200px 0 0 0px;  }
+#musbox1 {width:80%; height:auto;  margin:0 auto;  display:flex; flex-flow:row; } 
+#musbox2 {width:80%; height:auto; border-radius: 25px;
+    overflow: hidden; background-color: rgb(252, 189, 241); box-shadow: 4px 4px 4px pink; } 
+
+#musimg {width:80%; height: auto;  margin:50px 0 2px 50px; } 
+#musimg1 {width:20%; height:100px; border-radius: 80px;  margin:0 0 0 30px; overflow: hidden;}
+#musimg1 > img {width:100%; height:100%;}
+#musimg2 {width:50%; height:auto;   float: right; margin:-100px 0 0 0px; display:flex; flex-direction: column; }
+#musimg2 > h3 {font-size: 25px; margin:0; color:#fff;}   
+#musimg2 > h5 {font-size: 18px; margin:20px 0 0 0px; color:#fff;} 
+
+#musbox3 {width:100%; height:auto; background-color:rgb(255, 255, 255) ; margin:15px auto 0px;  padding:20px; }
+#chart2 {width:35%; height:auto; display:flex; align-items:center; flex-direction: column; justify-content: center;  margin:10px 0 50px 0px;}
+#chart2 > h4 {text-align: center; }
+#chart2 > p {text-align: center; font-size: 14px; margin:0px 0 0 0px; color:rgb(102, 102, 102);}    
+
+#chart3 {width:40%; height:40px;  display:flex; align-items:center; justify-content: space-around;  float:right; margin:-90px 0 0 0px;}
+#chart3 > img {width:35px; height:35px;}    
+
+#basebox {width:100%; height:100%;  display:flex; align-items: center; flex-direction: column; justify-content: center;margin:180px 0 0 0px;}
+#basebox1 {width:40%; height:80%;  margin:10px;  display:flex; flex-direction: column;}
+#basebox1 > p {color:rgb(102, 102, 102); }
+#basebox1 > h3 {color:rgb(102, 102, 102);}
+#basebox1 > img {width:60px; height:80px;}
+
+#role {width:100%; height:50px;  display:flex; align-items: center; margin:10px 0 0 0px; }
+#role1 {width:80%; height:40px;  border-radius: 30px; overflow: hidden; display:flex;  }
+#role1 > img {width:20%; height:100%; }
+#role > p {color:rgb(102, 102, 102); margin:10px;}
+
+/*작은 로고 박스*/
+
+#logotype {width:100%; height:auto; margin:100px 0 0 0px; }  
+#logobox {width:100%; height:250px;  margin:0 auto; display:flex; flex-flow:row wrap; align-items: center; justify-content: center;} 
+#logobox1 {width:11%; height:200px;  margin:10px; } 
+#logobox1 > img {width:90%; height:90%; opacity: 0.3;}  
+#logobox1 > img:hover {opacity: 1; transition: all 0.5s; cursor: pointer;} 
+
+/*뮤직 박스*/
+
+#musicboxname {width:100%; height:auto;  margin:100px 0 0 0px; }   
+#musicboxname1 {width:100%; height:auto; margin:0 auto; }  
+#musicboxname1 > h1 {text-align: center; font-size:55px; color:#fff;}
+#musicboxname1 > p {text-align: center; font-size:13px; color: rgb(150, 150, 150);}
+
+#musicbox {width:100%; height:auto;  }
+#musicbox1 {width:100%; height:auto;  margin:0 auto; display:flex; 
+     align-items:center; justify-content:space-evenly; flex-flow:row;}
+
+#musicbox2 {width:28%; height:auto;  margin:10px; display:flex; 
+ align-items: center;  flex-direction: column; }
+
+#byby {width:100%; height:50px; display:flex; } 
+#byby > img {width:10%; height:35px; margin:10px 0 0 0px;  }
+#byby > p {margin:13px 0 0 12px; font-size: 14px;}
+#textbox00 {display: flex; flex-direction: column; justify-content: space-evenly; padding:10px;}   
+#textbox00 > p {font-size: 15px;}
+#textbox00 > h3 {font-size:15px;}
+
+#first1 {width:50%; height:280px; background-color:rgb(255, 255, 255); border-radius: 200px; margin:20px 0 50px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192); }
+#first2 {width:60%; height:400px;background-color:rgb(255, 255, 255);border-radius: 30px; margin:10px 0 50px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192); }
+#first3 {width:60%; height:300px; background-color:rgb(255, 255, 255); border-radius: 30px; margin:10px 0 50px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192);}
+
+#first4 {width:60%; height:400px; background-color:rgb(255, 255, 255); border-radius: 30px; margin:20px 0 50px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192);}
+#first5 {width:60%; height:400px; background-color:rgb(255, 255, 255); border-radius: 30px; margin:10px 0 50px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192);}
+
+#first6 {width:60%; height:400px; background-color:rgb(255, 255, 255); border-radius: 30px; margin:20px 0 80px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192);}
+#first7 {width:60%; height:400px; background-color:rgb(255, 255, 255); border-radius: 30px; margin:10px 0 60px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192);}
+#first8 {width:50%; height:280px; background-color:rgb(255, 255, 255); border-radius: 200px; margin:10px 0 50px 0px; overflow: hidden; box-shadow: 4px 4px 4px rgb(255, 192, 192);}
+
+#first1 > img {width:100%; height:100%}
+#first1 > img:hover {transition:all 0.5s; transform: scale(1.1);}    
+
+#first2 > img {width:100%; height:60%}
+#first2 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+#first3 > img {width:100%; height:100%}
+#first3 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+#first4 > img {width:100%; height:60%}
+#first4 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+
+#first5 > img {width:100%; height:60%}
+#first5 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+
+#first6 > img {width:100%; height:60%}
+#first6 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+
+#first7 > img {width:100%; height:60%}
+#first7 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+
+#first8 > img {width:100%; height:100%}
+#first8 > img:hover {transition:all 0.5s; transform: scale(1.1);}
+
+/*메일박스*/
+
+#mailbox1 {width:100%; height:auto;  margin:0px 0 0 0px; }    
+.mail_box {width:80%; height:200px; background-color: rgb(255, 245, 245); margin:0 auto; border-radius: 20px; 
+display:flex; align-items:center; justify-content: center; box-shadow: 4px 4px 4px rgb(255, 192, 192);; flex-direction:column;}    
+.mail_box input[type="email"] {margin:0; background: none; border:none; border-bottom:1px solid rgba(128, 0 , 128 , 0.548);
+width:90%; height:50px; display:block; float:left; font-size:20px; color:rgb(69, 19, 116); text-align:center; opacity: 0.5;}
+
+.mail_box input[type="email"]:focus {outline: none}
+.mail_box input[type="email"]::placeholder {font-size: 20px; text-align:center; color:rgb(69, 19, 116); }
+
+.mail_box button {display:block; float:left; margin:0; margin-left:15px; margin-top:15px; width:150px; height:40px;
+cursor: pointer; font-size:13px; color:#fff; border:none; border-radius:30px; transition: all 0.5s; margin-bottom:10px; background-color: rgb(97, 21, 97) ; }
+.mail_box button:hover {box-shadow: 0 5px 10px rgba(100, 0, 0, 0.2); transition: 0.5s; margin-bottom: 10px; transform: scale(1.05);}
+
+/*마지막 아이콘 박스*/
+
+#facebook {width:70%; height:auto; margin:-200px auto;}
+#facebook1 {width:70%; height:auto;  margin:-200px auto; display:flex; 
+    align-items:center; justify-content: space-evenly; flex-flow:row wrap;}
+#massagebox {width:10%; height:100px;  margin:10px 0 100px 0px;}
+
+#massagebox > a > img {width:100%; height:100%; opacity: 0.4; }
+#massagebox > a > img:hover {opacity: 1; transition: all 0.5s;}
+
+/*****footer*****/
+
+footer {width:100%; height:auto; background-color: rgb(5, 5, 77); margin:200px 0 0 0px;}  
+#finlogo {width:100%; height:auto;  margin:0 auto; display:flex; justify-content: space-around; flex-direction: column; }
+#finlogo1 {width:15%; height:150px;  margin:0 auto;}
+#finlogo2 {width:100%; height:auto;  display:flex; align-items: center; flex-flow:row wrap; justify-content: center; align-items: center;}
+#finlogo3 {width:100%; height:auto;  display:flex; align-items: center; justify-content: space-between; margin:0 auto;} 
+
+#finlogo1 > img {width:100%; height:100%; }
+
+#artibox {width:13%; height:250px;  margin:20px;}
+#artibox > img {width:100%; height:100%; }
+#artibox > img:hover {opacity: 0.7; transition: all 0.5s;}
+
+#finbox {width:20%; height:60px;  display:flex; align-items: center; justify-content: center;}
+#finbox > h5 {color:#fff; }
+}

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NeoBeat</title>
+<style>
+* {box-sizing:border-box; margin:0; }
+ul,li,ol {list-style: none;}
+#text12 > img {width:30px; height:30px; }
+#text12 {width:100%; height:100%; position: relative; left:0; bottom:100%; display:flex; flex-direction: column; justify-content: center; align-items: center; opacity: 0;}
+#artibox:hover #text12 {opacity: 1; transition: all 1s; backdrop-filter: blur(5px);}
+
+@media (max-width:599px){
+/*****header*****/
+
+header {width:100%; height:auto; background-color:#fff;
+margin:0 auto; position: fixed; z-index:1; opacity: 0.9;  }
+.b {width:100%; height:auto;  display:block; background-color: rgb(255, 239, 239);}
+.navbox1 {width:100%; height:auto; display:flex; flex-direction: column; }
+.b > ul > li {display:flex; flex-direction: column; padding:15px;}
+.b > ul > li > a {text-decoration: none; color:rgb(80, 80, 80); } 
+.b > ul > li > a:hover {color:#fff; background-color: blueviolet; padding:15px;}
+.logo {width:100%; height:100px; display:flex; align-items: center;  justify-content: space-between; }
+.logo > img {width:50%; height:100%; }
+.logo > .a {width:6%; height:40%; }
+.logo > .a:hover {cursor: pointer;}
+.a {display:block; }
+.b {display:none; }
+.c {display:none; }
+
+/*****slider*****/
+
+#slider {width:100%; height:500px; background-image: url("img/sub_slide_01 (1).jpg");  background-size: cover; background-attachment: fixed;}
+#slider > img {width:100%; height:100%; }
+.slibox {width:100%; height:auto; margin:200px auto 0px; position: absolute; }
+.textt {width:100%; height:200px; margin:0px auto;} 
+.textt > h1 {text-align: center; margin:0px auto 0px; font-size: 40px; color:#fff;}  
+.textt > p {text-align: center; margin:0px auto 0px; font-size: 12px; color:#fff;}
+
+/*****main*****/
+
+/*메인박스*/
+
+main {width:100%; height:auto; background-color: blueviolet; }
+#bigbox {width:100%; height:auto;  margin:0 auto; display:flex; flex-flow:row wrap; }
+
+#bigbox1 {width:100%; height:4500px;  display:flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
+
+#subbox {width:90%; height:auto;  display:flex; flex-direction: column; justify-content: space-evenly;} 
+
+#subbox1 {width:100%; height:auto;  display:flex; flex-direction: column; justify-content: space-evenly; padding:5px; margin:-300px 0 0 0px;}
+#subbox1 > h1 {color:#fff;}
+#subbox1 > p {color:#ddd;}
+#subbox1 > img {width:35px; height:35px; }
+
+#subbox2 {width:100%; height:400px; }
+#subbox2 > img {width:100%; height:100%; }
+
+#subbox3 {width:95%; height:250px; }
+
+#subtag1 {width:95%; height:auto;  display:flex; padding:10px; align-items: center;}
+#subtag1 > h4 {color:#fff; font-size:15px; margin:0 10px 0 0px; }
+#subtag1 > button {width:70px; height:30px; border:0px; margin:5px; background-color: rgb(168, 102, 255); color:#fff;}
+#subtag1 > button:hover {color:rgb(168,102,255); background-color: #fff; transition: all 1s;}
+
+#subtag2 {width:95%; height:auto; display:flex; align-items: center; padding:10px;}
+#subtag2 > p {font-size:14px; width:100%; height:auto; color: #fff;}
+
+#subtag3 {width:95; height:50px; display:flex; align-items: center; justify-content: space-between; padding:5px;}
+#subtag3 > button {width:100px; height:40px; border:0px; background-color:rgb(255, 64, 182); color:#fff;}
+#subtag3 > button:hover {color:rgb(255, 64, 182); background-color: #fff; transition: all 1s;}
+#memo {width:15%; height:40px; display:flex; align-items: center; justify-content: space-around;}
+#memo > img {width:30px; height:35px;}
+#memo > p {font-size:12px;}
+
+/*메인박스2*/
+
+#bigbox2 {width:100%; height:2950px;  display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; margin:300px 0 0 0px;}
+
+/**key**/
+#key {width: 70%; height:100px;  margin:8px auto; margin:-500px 0 0 0px;
+display:flex; align-items:center; justify-content: center; }
+#key input[type="email"] {margin:0; width:450px; height:50px; display:block; font-size:15px; border:0px; padding:10px;}
+#key > button {width:50px; height:50px; border:0px; cursor: pointer; background-color: #fff;}
+#key > button:hover {color:#fff; background-color: rgb(255, 64, 182); transition: all 0.5s; }
+
+/**about**/
+
+#about {width:70%; height:400px;  display:flex; flex-direction: column; justify-content: space-around;}
+#about > img {width:100%; height:280px; }
+#about > h3 {font-size:20px; color:#fff;}
+#about > h6 {font-size:13px; color:#fff;}
+
+/**follow**/
+
+#follow {width:70%; height:120px;  display:flex; flex-direction: column; justify-content: space-evenly; }
+#follow > h3 {font-size:20px; color:#fff;}
+#sub_icon0 {width:100%; height:60px;  display:flex; align-items: center; justify-content: space-between;}
+#sub_icon {width:50px; height:50px;  margin:0px; overflow: hidden;}
+#sub_icon > img {width:105%; height:105%; }
+#sub_icon:hover {border-radius: 20px; transition: all 0.5s;}
+
+/**categories**/
+
+#categories {width:70%; height:550px;  display:flex; flex-direction: column; justify-content: space-around; }
+#categories > h3 {font-size:20px; color:#fff;}
+#catebox {width:100%; height:500px;  display:flex; flex-direction: column; justify-content: space-evenly;}
+#catebox1 {width:100%; height:45px;  display:flex;
+ align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(226, 226, 226);}
+#catebox1 > h5 {font-size:15px; color:#fff;}
+#catebox1 > h5:hover {color:rgb(255, 64, 182);}
+
+/**testimonials**/
+
+#testimonials {width:70%; height:220px; display:flex; flex-direction:column; justify-content: space-evenly; }
+#testimonials > h3 {font-size:20px; color:#fff;}
+#testimonials > img {width:30px; height:30px;}
+#testimonials > p {color:#fff; font-size:15px; }
+#daumbox {width:100%; height:30px; display:flex; justify-content: center;}
+
+/**popular**/
+
+#popular {width:70%; height:500px;  display:flex; flex-direction: column; justify-content: space-evenly; }
+#popular > h3 {font-size:20px; color:#fff;}
+#popu {width:100%; height:110px; display:flex; justify-content: space-between;}
+#popu > img {width:27%; height:100%; }
+#popu1 {width:70%; height:100%; display:flex; flex-direction: column; justify-content: center; padding:5px;}
+#popu1 > h4 {font-size:17px; color:#fff;}
+#popu1 > h6 {font-size:15px; color:rgb(255, 64, 182);}
+#popu1 > p {font-size:15px; color:#fff;}
+
+/**tags**/
+
+#tags {width:70%; height:220px; display:flex; flex-direction: column; justify-content: space-evenly; }
+#tags > h3 {font-size:20px; color:#fff;}
+
+#tag1 {width:75%; height:50px; display:flex; justify-content: space-between; align-items: center;}
+#tagbox {width:auto; height:35px;  background-color: rgb(168, 102, 255); display:flex; align-items: center; justify-content: center; padding:10px; cursor: pointer;}
+#tagbox > h5 {font-size:14px; color:#fff; }
+#tagbox:hover {background-color: #fff; transition: all 1s; }
+#tagbox > h5:hover {color:rgb(168, 102, 255); transition: all 1s;}
+
+#tag2 {width:78%; height:50px; display:flex; justify-content: space-between; align-items: center;}
+#tag3 {width:78%; height:50px; display:flex; justify-content: space-between; align-items: center;}
+
+/**letter**/
+
+#letter {width:70%; height:170px; display:flex; flex-direction: column; justify-content: space-evenly; }
+#letter > h3 {font-size:20px; color:#fff;}
+#letterbox {width:100%; height:100px; display:flex; align-items:center; justify-content: center;}
+
+#letterbox input[type="email"] {margin:0; width:450px; height:50px; display:block; font-size:15px; border:0px; padding:10px;}
+#letterbox > button {width:50px; height:50px; border:0px; cursor: pointer; background-color: #fff;}
+#letterbox > button:hover {color:#fff; background-color: rgb(255, 64, 182); transition: all 0.5s;}
+
+/**insta**/
+
+#insta {width:70%; height:250px;display:flex; flex-direction: column; justify-content: space-evenly; }
+#insta > h3 {font-size:20px; color:#fff;}
+
+#instabox {width:100%; height:220px; display:flex; flex-flow:row wrap; justify-content: space-evenly; align-items: center;}
+#instabox1 {width:31%; height:100px;}
+
+#instabox1 > img {width:100%; height:100%; }
+
+#instabox1:hover #text12 {opacity: 1; transition: all 1s; backdrop-filter: blur(5px);}
+
+
+
+/*****footer*****/
+
+footer {width:100%; height:auto; background-color: rgb(5, 5, 77);}  
+#finlogo {width:100%; height:auto;  margin:0 auto; display:flex; flex-direction: column; justify-content: space-around;}
+#finlogo1 {width:40%; height:150px;  margin:0 auto;}
+#finlogo2 {width:100%; height:auto;  display:flex; align-items: center; justify-content: center; flex-flow:row wrap;}
+#finlogo3 {width:100%; height:auto;  display:flex; align-items: center; justify-content: space-between; margin:0 auto;} 
+
+#finlogo1 > img {width:100%; height:100%; }
+
+#artibox {width:33%; height:200px;  margin:20px; }
+#artibox > img {width:100%; height:100%; }
+#artibox > img:hover {opacity: 0.7; transition: all 0.5s;}
+
+#finbox {width:50%; height:60px;  display:flex; align-items: center; justify-content: center;}
+#finbox > h5 {color:#fff; font-size:10px;}
+}
+
+@media (min-width:600px){
+/*****header*****/
+
+header {width:100%; height:auto; background-color:#fff;
+margin:0 auto; position: fixed; z-index:1; opacity: 0.9;  }
+.b {width:100%; height:auto; background-color: rgb(255, 239, 239); }
+.navbox1 {width:100%; height:auto; display:flex; flex-direction: column; }
+.b > ul {display:flex; flex-direction: column; padding:20px;}
+.b > ul > li > a {text-decoration: none; color:rgb(80, 80, 80); display:block; padding:10px; } 
+.b > ul > li > a:hover {color:#fff; background-color: blueviolet; padding:15px;}
+.logo {width:100%; height:100px; display:flex; align-items: center;  justify-content: space-between;}
+.logo > img {width:30%; height:100%; }
+.logo > .a {width:4%; height:40%; }
+.logo > .a:hover {cursor: pointer;}
+.a {display:block; }
+.b {display:none; }
+.c {display:none; }
+
+/*****slider*****/
+
+#slider {width:100%; height:500px; background-image: url("img/sub_slide_01 (1).jpg"); background-size: cover; background-attachment: fixed;}
+#slider > img {width:100%; height:100%; }
+.slibox {width:100%; height:auto; margin:200px auto 0px; position: absolute;}
+.textt {width:100%; height:200px; margin:0px auto;} 
+.textt > h1 {text-align: center; margin:0px auto 0px; font-size: 40px; color:#fff;}  
+.textt > p {text-align: center; margin:0px auto 0px; font-size: 12px; color:#fff;}
+
+/*****main*****/
+
+/*메인박스*/
+
+main {width:100%; height:auto; background-color:  blueviolet; }
+#bigbox {width:100%; height:auto;  margin:0 auto; display:flex; flex-flow:row wrap; }
+
+#bigbox1 {width:100%; height:4500px;  display:flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
+
+#subbox {width:90%; height:auto;  display:flex; flex-direction: column; justify-content: space-evenly;} 
+
+#subbox1 {width:100%; height:auto;  display:flex; flex-direction: column; justify-content: space-evenly; padding:5px; margin:200px 0 0 0px;}
+#subbox1 > h1 {color:#fff;}
+#subbox1 > p {color:#ddd;}
+#subbox1 > img {width:35px; height:35px; }
+
+#subbox2 {width:100%; height:600px; }
+#subbox2 > img {width:100%; height:100%; }
+
+#subbox3 {width:95%; height:250px; }
+
+#subtag1 {width:95%; height:auto;  display:flex; padding:10px; align-items: center;}
+#subtag1 > h4 {color:#fff; font-size:15px; margin:0 10px 0 0px; }
+#subtag1 > button {width:70px; height:30px; border:0px; margin:5px; background-color: rgb(168, 102, 255); color:#fff;}
+#subtag1 > button:hover {color:rgb(168,102,255); background-color: #fff; transition: all 1s;}
+
+#subtag2 {width:95%; height:auto; display:flex; align-items: center; padding:10px;}
+#subtag2 > p {font-size:14px; width:100%; height:auto; color: #fff;}
+
+#subtag3 {width:95; height:50px; display:flex; align-items: center; justify-content: space-between; padding:5px;}
+#subtag3 > button {width:100px; height:40px; border:0px; background-color:rgb(255, 64, 182); color:#fff;}
+#subtag3 > button:hover {color:rgb(255, 64, 182); background-color: #fff; transition: all 1s;}
+#memo {width:15%; height:40px; display:flex; align-items: center; justify-content: space-around;}
+#memo > img {width:30px; height:35px;}
+#memo > p {font-size:12px;}
+
+/*메인박스2*/
+
+#bigbox2 {width:100%; height:2950px;  display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; margin:300px 0 0 0px;}
+
+/**key**/
+#key {width: 100%; height:100px;  margin:8px auto;
+display:flex; align-items:center; justify-content: center; }
+#key input[type="email"] {margin:0; width:450px; height:50px; display:block; font-size:15px; border:0px; padding:10px;}
+#key > button {width:50px; height:50px; border:0px; cursor: pointer; background-color: #fff;}
+#key > button:hover {color:#fff; background-color: rgb(255, 64, 182); transition: all 0.5s; }
+
+/**about**/
+
+#about {width:60%; height:300px;  display:flex; flex-direction: column; justify-content: space-around;}
+#about > img {width:100%; height:280px; }
+#about > h3 {font-size:20px; color:#fff;}
+#about > h6 {font-size:13px; color:#fff;}
+
+/**follow**/
+
+#follow {width:60%; height:120px;  display:flex; flex-direction: column; justify-content: space-evenly; }
+#follow > h3 {font-size:20px; color:#fff;}
+#sub_icon0 {width:100%; height:60px;  display:flex; align-items: center; justify-content: space-between;}
+#sub_icon {width:50px; height:50px;  margin:0px; overflow: hidden;}
+#sub_icon > img {width:105%; height:105%; }
+#sub_icon:hover {border-radius: 20px; transition: all 0.5s;}
+
+/**categories**/
+
+#categories {width:60%; height:550px;  display:flex; flex-direction: column; justify-content: space-around; }
+#categories > h3 {font-size:20px; color:#fff;}
+#catebox {width:100%; height:500px;  display:flex; flex-direction: column; justify-content: space-evenly;}
+#catebox1 {width:100%; height:45px;  display:flex;
+ align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(226, 226, 226);}
+#catebox1 > h5 {font-size:15px; color:#fff;}
+#catebox1 > h5:hover {color:rgb(255, 64, 182);}
+
+/**testimonials**/
+
+#testimonials {width:60%; height:220px; display:flex; flex-direction:column; justify-content: space-evenly; }
+#testimonials > h3 {font-size:20px; color:#fff;}
+#testimonials > img {width:30px; height:30px;}
+#testimonials > p {color:#fff; font-size:15px; }
+#daumbox {width:100%; height:30px; display:flex; justify-content: center;}
+
+/**popular**/
+
+#popular {width:60%; height:500px;  display:flex; flex-direction: column; justify-content: space-evenly; }
+#popular > h3 {font-size:20px; color:#fff;}
+#popu {width:100%; height:110px; display:flex; justify-content: space-between;}
+#popu > img {width:27%; height:100%; }
+#popu1 {width:70%; height:100%; display:flex; flex-direction: column; justify-content: center; padding:5px;}
+#popu1 > h4 {font-size:17px; color:#fff;}
+#popu1 > h6 {font-size:15px; color:rgb(255, 64, 182);}
+#popu1 > p {font-size:15px; color:#fff;}
+
+/**tags**/
+
+#tags {width:60%; height:220px; display:flex; flex-direction: column; justify-content: space-evenly; }
+#tags > h3 {font-size:20px; color:#fff;}
+
+#tag1 {width:75%; height:50px; display:flex; justify-content: space-between; align-items: center;}
+#tagbox {width:auto; height:35px;  background-color: rgb(168, 102, 255); display:flex; align-items: center; justify-content: center; padding:10px; cursor: pointer;}
+#tagbox > h5 {font-size:14px; color:#fff; }
+#tagbox:hover {background-color: #fff; transition: all 1s; }
+#tagbox > h5:hover {color:rgb(168, 102, 255); transition: all 1s;}
+
+#tag2 {width:78%; height:50px; display:flex; justify-content: space-between; align-items: center;}
+#tag3 {width:78%; height:50px; display:flex; justify-content: space-between; align-items: center;}
+
+/**letter**/
+
+#letter {width:60%; height:170px; display:flex; flex-direction: column; justify-content: space-evenly; }
+#letter > h3 {font-size:20px; color:#fff;}
+#letterbox {width:100%; height:100px; display:flex; align-items:center; justify-content: center;}
+
+#letterbox input[type="email"] {margin:0; width:450px; height:50px; display:block; font-size:15px; border:0px; padding:10px;}
+#letterbox > button {width:50px; height:50px; border:0px; cursor: pointer; background-color: #fff;}
+#letterbox > button:hover {color:#fff; background-color: rgb(255, 64, 182); transition: all 0.5s;}
+
+/**insta**/
+
+#insta {width:60%; height:250px;display:flex; flex-direction: column; justify-content: space-evenly; }
+#insta > h3 {font-size:20px; color:#fff;}
+
+#instabox {width:100%; height:220px; display:flex; flex-flow:row wrap; justify-content: space-evenly; align-items: center;}
+#instabox1 {width:31%; height:100px;}
+
+#instabox1 > img {width:100%; height:100%; }
+
+#instabox1:hover #text12 {opacity: 1; transition: all 1s; backdrop-filter: blur(5px);}
+
+
+
+/*****footer*****/
+
+footer {width:100%; height:auto; background-color: rgb(5, 5, 77);}  
+#finlogo {width:100%; height:auto;  margin:0 auto; display:flex; justify-content: space-around; flex-direction: column; }
+#finlogo1 {width:30%; height:150px;  margin:0 auto;}
+#finlogo2 {width:100%; height:auto;  display:flex; align-items: center; flex-flow:row wrap; justify-content: center; align-items: center;}
+#finlogo3 {width:100%; height:auto;  display:flex; align-items: center; justify-content: space-between; margin:0 auto;} 
+
+#finlogo1 > img {width:100%; height:100%; }
+
+#artibox {width:25%; height:250px;  margin:20px;}
+#artibox > img {width:100%; height:100%; }
+#artibox > img:hover {opacity: 0.7; transition: all 0.5s;}
+
+#finbox {width:20%; height:60px;  display:flex; align-items: center; justify-content: center;}
+#finbox > h5 {color:#fff; }
+}
+
+@media (min-width:1100px){
+/*****header*****/
+
+header {width:100%; height:100px; background-color:rgb(255, 255, 255);
+margin:0 auto; position: fixed; z-index:1; opacity:0.9; }
+.b {width:40%; height:auto; background-color: rgb(255, 255, 255); }
+.navbox1 {width:100%; height:auto; margin:0 auto; display:flex; align-items:center;
+     flex-flow:row wrap; justify-content: space-evenly; background-color: rgb(255, 255, 255);}
+.b > ul {display: flex; flex-flow:row wrap; align-items: center; }
+.b > ul > li > a {text-decoration: none; color:#000; display:flex; font-size:18px;
+     align-items:center; flex-flow:row  wrap; width:100%; height:auto; margin:0 0 0 40px;} 
+.b > ul > li > a:hover {color:rgb(105, 0, 105); background-color: #fff; }
+.logo {width: 250px; height:100px;  }
+.logo > img {width:100%; height:100%; }
+.logo > .a {width:50px; height:50px; }
+.c {width:100px; height:80px; display:flex; align-items:center; justify-content: space-around; }
+.icon {width:30px; height:30px; display:flex; }
+.icon > img {width:100%; height:100%; }
+.icon > img:hover {cursor: pointer;}
+
+.a {display:none; }
+.b {display:block; }
+
+/*****slider*****/
+
+#slider {width:100%; height:500px; background-image: url("img/sub_slide_01 (1).jpg");  background-size: cover; background-attachment: fixed;}
+#slider > img {width:100%; height:100%; }
+.slibox {width:100%; height:auto; margin:270px auto 0px; position: absolute;}
+.textt {width:100%; height:200px; margin:0px auto;} 
+.textt > h1 {text-align: center; margin:0px auto 0px; font-size: 40px; color:#fff;}  
+.textt > p {text-align: center; margin:0px auto 0px; font-size: 15px; color:#fff;}
+
+/*****main*****/
+
+/*메인박스*/
+
+main {width:100%; height:4600px; background-color: blueviolet;}
+#bigbox {width:1500px; height:4500px;  margin:0 auto; display:flex; justify-content: space-around;}
+
+#bigbox1 {width:950px; height:4500px;  display:flex; flex-direction: column; justify-content: space-evenly; align-items: center;}
+
+#subbox {width:950px; height:1050px;  display:flex; flex-direction: column; justify-content: space-evenly;} 
+
+#subbox1 {width:950px; height:150px;  display:flex; flex-direction: column; justify-content: space-evenly; padding:5px;}
+#subbox1 > h1 {color:#fff;}
+#subbox1 > p {color:#ddd;}
+#subbox1 > img {width:35px; height:35px; }
+
+#subbox2 {width:950px; height:600px; }
+#subbox2 > img {width:100%; height:100%; }
+
+#subbox3 {width:950px; height:250px; }
+
+#subtag1 {width:950px; height:50px;  display:flex; padding:10px; align-items: center;}
+#subtag1 > h4 {color:#fff; font-size:15px; margin:0 10px 0 0px; }
+#subtag1 > button {width:70px; height:30px; border:0px; margin:5px; background-color: rgb(168, 102, 255); color:#fff;}
+#subtag1 > button:hover {color:rgb(168,102,255); background-color: #fff; transition: all 1s;}
+
+#subtag2 {width:950px; height:150px; display:flex; align-items: center; padding:10px;}
+#subtag2 > p {font-size:14px; width:90%; height:auto; color: #fff;}
+
+#subtag3 {width:950px; height:50px; display:flex; align-items: center; justify-content: space-between; padding:5px;}
+#subtag3 > button {width:100px; height:40px; border:0px; background-color:rgb(255, 64, 182); color:#fff;}
+#subtag3 > button:hover {color:rgb(255, 64, 182); background-color: #fff; transition: all 1s;}
+#memo {width:150px; height:40px; display:flex; align-items: center; justify-content: space-around;}
+#memo > img {width:30px; height:35px;}
+#memo > p {font-size:12px;}
+
+/*메인박스2*/
+
+#bigbox2 {width:500px; height:2950px;  display:flex; flex-direction: column; align-items: center; justify-content: space-evenly; margin:78px 0 0 0px;}
+
+/**key**/
+#key {width: 350px; height:220px;  margin:8px auto;
+display:flex; align-items:center; justify-content: center;}
+#key input[type="email"] {margin:0; width:450px; height:50px; display:block; font-size:15px; border:0px; padding:10px;}
+#key > button {width:50px; height:50px; border:0px; cursor: pointer; background-color: #fff;}
+#key > button:hover {color:#fff; background-color: rgb(255, 64, 182); transition: all 0.5s; }
+
+/**about**/
+
+#about {width:350px; height:400px;  display:flex; flex-direction: column; justify-content: space-around; margin:-110px 0 0 0px;}
+#about > img {width:100%; height:280px; }
+#about > h3 {font-size:20px; color:#fff;}
+#about > h6 {font-size:13px; color:#fff;}
+
+/**follow**/
+
+#follow {width:350px; height:120px;  display:flex; flex-direction: column; justify-content: space-evenly;}
+#follow > h3 {font-size:20px; color:#fff;}
+#sub_icon0 {width:100%; height:60px;  display:flex; align-items: center; justify-content: space-between;}
+#sub_icon {width:50px; height:50px;  margin:0px; overflow: hidden;}
+#sub_icon > img {width:105%; height:105%; }
+#sub_icon:hover {border-radius: 20px; transition: all 0.5s;}
+
+/**categories**/
+
+#categories {width:350px; height:550px; display:flex; flex-direction: column; justify-content: space-around;}
+#categories > h3 {font-size:20px; color:#fff;}
+#catebox {width:100%; height:500px;  display:flex; flex-direction: column; justify-content: space-evenly;}
+#catebox1 {width:100%; height:45px;  display:flex;
+ align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(226, 226, 226);}
+#catebox1 > h5 {font-size:15px; color:#fff;}
+#catebox1 > h5:hover {color:rgb(255, 64, 182);}
+
+/**testimonials**/
+
+#testimonials {width:350px; height:220px;  display:flex; flex-direction:column; justify-content: space-evenly;}
+#testimonials > h3 {font-size:20px; color:#fff;}
+#testimonials > img {width:30px; height:30px;}
+#testimonials > p {color:#fff; font-size:15px; }
+#daumbox {width:100%; height:30px;   display:flex; justify-content: center;}
+
+/**popular**/
+
+#popular {width:350px; height:500px;  display:flex; flex-direction: column; justify-content: space-evenly;}
+#popular > h3 {font-size:20px; color:#fff;}
+#popu {width:100%; height:110px;  display:flex; justify-content: space-between;}
+#popu > img {width:27%; height:100%; }
+#popu1 {width:70%; height:100%; display:flex; flex-direction: column; justify-content: center; padding:5px;}
+#popu1 > h4 {font-size:17px; color:#fff;}
+#popu1 > h6 {font-size:15px; color:rgb(255, 64, 182);}
+#popu1 > p {font-size:15px; color:#fff;}
+
+/**tags**/
+
+#tags {width:350px; height:220px; display:flex; flex-direction: column; justify-content: space-evenly;}
+#tags > h3 {font-size:20px; color:#fff;}
+
+#tag1 {width:75%; height:50px;  display:flex; justify-content: space-between; align-items: center;}
+#tagbox {width:auto; height:35px; background-color: rgb(168, 102, 255); display:flex; align-items: center; justify-content: center; padding:10px; cursor: pointer;}
+#tagbox > h5 {font-size:14px; color:#fff; }
+#tagbox:hover {background-color: #fff; transition: all 1s; }
+#tagbox > h5:hover {color:rgb(168, 102, 255); transition: all 1s;}
+
+#tag2 {width:78%; height:50px;  display:flex; justify-content: space-between; align-items: center;}
+#tag3 {width:78%; height:50px;  display:flex; justify-content: space-between; align-items: center;}
+
+/**letter**/
+
+#letter {width:350px; height:170px;  display:flex; flex-direction: column; justify-content: space-evenly;}
+#letter > h3 {font-size:20px; color:#fff;}
+#letterbox {width:100%; height:100px;  display:flex; align-items:center; justify-content: center;}
+
+#letterbox input[type="email"] {margin:0; width:450px; height:50px; display:block; font-size:15px; border:0px; padding:10px;}
+#letterbox > button {width:50px; height:50px; border:0px; cursor: pointer; background-color: #fff;}
+#letterbox > button:hover {color:#fff; background-color: rgb(255, 64, 182); transition: all 0.5s;}
+
+/**insta**/
+
+#insta {width:350px; height:250px; display:flex; flex-direction: column; justify-content: space-evenly;}
+#insta > h3 {font-size:20px; color:#fff;}
+
+#instabox {width:100%; height:220px; display:flex; flex-flow:row wrap; justify-content: space-evenly; align-items: center;}
+#instabox1 {width:31%; height:100px; }
+
+#instabox1 > img {width:100%; height:100%; }
+
+#instabox1:hover #text12 {opacity: 1; transition: all 1s; backdrop-filter: blur(5px);}
+
+
+
+/*****footer*****/
+
+footer {width:100%; height:auto; background-color: rgb(5, 5, 77); margin:00px 0 0 0px;}  
+#finlogo {width:100%; height:auto;  margin:0 auto; display:flex; justify-content: space-around; flex-direction: column; }
+#finlogo1 {width:15%; height:150px;  margin:0 auto;}
+#finlogo2 {width:100%; height:auto;  display:flex; align-items: center; flex-flow:row wrap; justify-content: center; align-items: center;}
+#finlogo3 {width:100%; height:auto;  display:flex; align-items: center; justify-content: space-between; margin:0 auto;} 
+
+#finlogo1 > img {width:100%; height:100%; }
+
+#artibox {width:13%; height:250px;  margin:20px;}
+#artibox > img {width:100%; height:100%; }
+#artibox > img:hover {opacity: 0.7; transition: all 0.5s;}
+
+#finbox {width:20%; height:60px;  display:flex; align-items: center; justify-content: center;}
+#finbox > h5 {color:#fff; }
+}
+
+
+
+</style>
+
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+    $(".a").click(function(){
+        $(".b").slideToggle();
+    });
+
+    $(window).resize(function(){
+        if(window.innerWidth<=1099){
+            $(".b").hide();
+        }
+
+        if(window.innerWidth>=1100){
+            $(".b").show();
+        }
+    });
+});
+
+</script>
+
+</head>
+
+<body>
+<header>
+<div class="navbox1">
+<div class="logo">
+    <a href="index.html"><img src="img/logo.png" alt="로고"></a>
+    <img src="img/menu-alt-256.webp" class="a">
+</div>
+<nav class="b">
+    <ul>
+        <li><a href="index.html"><b>Home</b></a></li>
+        <li><a href="sub.html"><b>Pages</b></a></li>
+        <li><a href="sub.html"><b>Discography</b></a></li>
+        <li><a href="sub.html"><b>Event</b></a></li>
+        <li><a href="sub.html"><b>Blog</b></a></li>
+        <li><a href="sub.html"><b>Shop</b></a></li>
+    </ul>
+</nav>
+<div class="c">
+    <div class="icon">
+        <img src="img/icon1.png" alt="아이콘1">
+    </div>    
+    <div class="icon">   
+        <img src="img/icon1.webp" alt="아이콘2">
+    </div>    
+    <div class="icon">   
+        <img src="img/icon2.png" alt="아이콘3">
+    </div> 
+</div>   
+</div>
+</header>    
+
+<div id="slider">
+<div class="slibox">
+    <div class="textt">
+        <h1>Our last News and Journal</h1>
+        <p>Welcome to NeoBeat, your new website and place <br> where your tunes comes first</p>
+    </div>
+</div>
+</div>
+
+<main>
+
+    <!-- subbox1 -->
+
+    <div id="bigbox">
+
+        <div id="bigbox1">
+
+            <div id="subbox">
+                <div id="subbox1">
+                    <h1>How to Sell Digital Product</h1>
+                    <p>May 31, 2021 - John Smith</p>
+                    <img src="img/점.png" alt="점">
+                </div>
+                <div id="subbox2">
+                    <img src="img/sub_main.jpg" alt="서브메인">
+                </div>
+                <div id="subbox3">
+                    <div id="subtag1">
+                        <h4>TAGS : </h4>
+                        <button>website</button>
+                        <button>Program</button>
+                    </div>
+                    <div id="subtag2">
+                        <p>Fugiat adipisicing aliquip in sed voluptate 
+                        dolore velit cupidatat aliqua dolor cupidatat minim
+                        consequat aute aliquip ad pariatur voluptate irure
+                        sunt aute in dolore occaecat esse dolor eu minim 
+                        consequat cillum eu in pariatur eiusmod ad esse 
+                        commodo velit aliquip veniam in nostrud velit anim 
+                        adipisicing eiusmod reprehenderit sit anim ut elit
+                        commodo sed sunt quis excepteur in adipisicing sunt 
+                        duis voluptate quis officia ut sed laborum irure nulla
+                        voluptate labore et est minim est aliqua sunt nulla
+                        officia aliqua culpa elit proident irure cupidatat 
+                        id do sed eu in quis anim esse nulla laborum commodo
+                        ut incididunt voluptate laboris ut elit eu amet 
+                        voluptate ad aliquip ex excepteur tempor reprehenderit
+                        laboris esse qui incididunt quis amet aute ad eiusmod
+                        elit cupidatat excepteur duis tempor ut cillum voluptate 
+                        in eu sint velit sunt ad culpa labore qui in excepteur
+                         proident sunt laboris.</p>
+                    </div>
+                    <div id="subtag3">
+                        <button>Read More</button>
+                        <div id="memo">
+                            <img src="img/icon1234.png" alt="아이콘123">
+                            <p>865</p>
+                            <img src="img/icon123.png" alt="아이콘1234">
+                            <p>21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="subbox">
+                <div id="subbox1">
+                    <h1>Better User Interface</h1>
+                    <p>May 30, 2021 - Michael Dennis</p>
+                    <img src="img/점.png" alt="점">
+                </div>
+                <div id="subbox2">
+                    <img src="img/sub_main2.jpg" alt="서브메인">
+                </div>
+                <div id="subbox3">
+                    <div id="subtag1">
+                        <h4>TAGS : </h4>
+                        <button>Design</button>
+                        <button>Art</button>
+                    </div>
+                    <div id="subtag2">
+                        <p>Fugiat adipisicing aliquip in sed voluptate 
+                        dolore velit cupidatat aliqua dolor cupidatat minim
+                        consequat aute aliquip ad pariatur voluptate irure
+                        sunt aute in dolore occaecat esse dolor eu minim 
+                        consequat cillum eu in pariatur eiusmod ad esse 
+                        commodo velit aliquip veniam in nostrud velit anim 
+                        adipisicing eiusmod reprehenderit sit anim ut elit
+                        commodo sed sunt quis excepteur in adipisicing sunt 
+                        duis voluptate quis officia ut sed laborum irure nulla
+                        voluptate labore et est minim est aliqua sunt nulla
+                        officia aliqua culpa elit proident irure cupidatat 
+                        id do sed eu in quis anim esse nulla laborum commodo
+                        ut incididunt voluptate laboris ut elit eu amet 
+                        voluptate ad aliquip ex excepteur tempor reprehenderit
+                        laboris esse qui incididunt quis amet aute ad eiusmod
+                        elit cupidatat excepteur duis tempor ut cillum voluptate 
+                        in eu sint velit sunt ad culpa labore qui in excepteur
+                         proident sunt laboris.</p>
+                    </div>
+                    <div id="subtag3">
+                        <button>Read More</button>
+                        <div id="memo">
+                            <img src="img/icon1234.png" alt="아이콘123">
+                            <p>756</p>
+                            <img src="img/icon123.png" alt="아이콘1234">
+                            <p>12</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="subbox">
+                <div id="subbox1">
+                    <h1>Experts Web Design Tips</h1>
+                    <p>May 29, 2021 - Sarah Michelle</p>
+                    <img src="img/점.png" alt="점">
+                </div>
+                <div id="subbox2">
+                    <img src="img/sub_main3.jpg" alt="서브메인">
+                </div>
+                <div id="subbox3">
+                    <div id="subtag1">
+                        <h4>TAGS : </h4>
+                        <button>Design</button>
+                        <button>Website</button>
+                    </div>
+                    <div id="subtag2">
+                        <p>Fugiat adipisicing aliquip in sed voluptate 
+                        dolore velit cupidatat aliqua dolor cupidatat minim
+                        consequat aute aliquip ad pariatur voluptate irure
+                        sunt aute in dolore occaecat esse dolor eu minim 
+                        consequat cillum eu in pariatur eiusmod ad esse 
+                        commodo velit aliquip veniam in nostrud velit anim 
+                        adipisicing eiusmod reprehenderit sit anim ut elit
+                        commodo sed sunt quis excepteur in adipisicing sunt 
+                        duis voluptate quis officia ut sed laborum irure nulla
+                        voluptate labore et est minim est aliqua sunt nulla
+                        officia aliqua culpa elit proident irure cupidatat 
+                        id do sed eu in quis anim esse nulla laborum commodo
+                        ut incididunt voluptate laboris ut elit eu amet 
+                        voluptate ad aliquip ex excepteur tempor reprehenderit
+                        laboris esse qui incididunt quis amet aute ad eiusmod
+                        elit cupidatat excepteur duis tempor ut cillum voluptate 
+                        in eu sint velit sunt ad culpa labore qui in excepteur
+                         proident sunt laboris.</p>
+                    </div>
+                    <div id="subtag3">
+                        <button>Read More</button>
+                        <div id="memo">
+                            <img src="img/icon1234.png" alt="아이콘123">
+                            <p>625</p>
+                            <img src="img/icon123.png" alt="아이콘1234">
+                            <p>23</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="subbox">
+                <div id="subbox1">
+                    <h1>Avoid These Erros In UI Design</h1>
+                    <p>May 28, 2021 - Katty Wilson</p>
+                    <img src="img/점.png" alt="점">
+                </div>
+                <div id="subbox2">
+                    <img src="img/sub_main4.jpg" alt="서브메인">
+                </div>
+                <div id="subbox3">
+                    <div id="subtag1">
+                        <h4>TAGS : </h4>
+                        <button>Program</button>
+                        <button>Design</button>
+                    </div>
+                    <div id="subtag2">
+                        <p>Fugiat adipisicing aliquip in sed voluptate 
+                        dolore velit cupidatat aliqua dolor cupidatat minim
+                        consequat aute aliquip ad pariatur voluptate irure
+                        sunt aute in dolore occaecat esse dolor eu minim 
+                        consequat cillum eu in pariatur eiusmod ad esse 
+                        commodo velit aliquip veniam in nostrud velit anim 
+                        adipisicing eiusmod reprehenderit sit anim ut elit
+                        commodo sed sunt quis excepteur in adipisicing sunt 
+                        duis voluptate quis officia ut sed laborum irure nulla
+                        voluptate labore et est minim est aliqua sunt nulla
+                        officia aliqua culpa elit proident irure cupidatat 
+                        id do sed eu in quis anim esse nulla laborum commodo
+                        ut incididunt voluptate laboris ut elit eu amet 
+                        voluptate ad aliquip ex excepteur tempor reprehenderit
+                        laboris esse qui incididunt quis amet aute ad eiusmod
+                        elit cupidatat excepteur duis tempor ut cillum voluptate 
+                        in eu sint velit sunt ad culpa labore qui in excepteur
+                         proident sunt laboris.</p>
+                    </div>
+                    <div id="subtag3">
+                        <button>Read More</button>
+                        <div id="memo">
+                            <img src="img/icon1234.png" alt="아이콘123">
+                            <p>865</p>
+                            <img src="img/icon123.png" alt="아이콘1234">
+                            <p>21</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- subbox2 -->    
+
+        <div id="bigbox2">
+
+            <!-- key 박스 -->
+            <div id="key">
+                <input type="email" name="email" placeholder="Enter your Keywords...">
+                <button>click</button>
+            </div>
+
+            <!-- about 박스 -->
+            <div id="about">
+                <h3>ABOUT US</h3>
+                <img src="img/subbox-img-1.jpg" alt="서브이미지">
+                <h6>Exhibiz - Event Conference <br><br>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry’s standard.</h6>
+            </div>
+
+            <!-- follow 박스 -->
+            <div id="follow">
+                <h3>FOLLOW US</h3>
+              <div id="sub_icon0">
+
+                <div id="sub_icon">
+                    <img src="img/icon_sub1.PNG" alt="서브아이콘박스">
+                </div>
+                <div id="sub_icon">
+                    <img src="img/icon_sub2.PNG" alt="서브아이콘박스">
+                </div>
+                <div id="sub_icon">
+                    <img src="img/icon_sub3.PNG" alt="서브아이콘박스">
+                </div>
+                <div id="sub_icon">
+                    <img src="img/icon_sub4.PNG" alt="서브아이콘박스">
+                </div>
+                <div id="sub_icon">
+                    <img src="img/icon_sub5.PNG" alt="서브아이콘박스">
+                </div>
+                <div id="sub_icon">
+                    <img src="img/icon_sub6.PNG" alt="서브아이콘박스">
+                </div>
+
+              </div>  
+            </div>
+
+            <!-- categories 박스 -->
+            <div id="categories">
+                <h3>CATEGORIES</h3>
+                <div id="catebox">
+                    <div id="catebox1">
+                        <h5>Arts</h5>
+                        <h5>12</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Branding</h5>
+                        <h5>16</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Conference</h5>
+                        <h5>10</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Creative Design</h5>
+                        <h5>08</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Design</h5>
+                        <h5>12</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Design Tutorials</h5>
+                        <h5>21</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Entertainment</h5>
+                        <h5>11</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Feature</h5>
+                        <h5>19</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Other Exhibition</h5>
+                        <h5>18</h5>
+                    </div>
+                    <div id="catebox1">
+                        <h5>Sample</h5>
+                        <h5>19</h5>
+                    </div>
+                </div>
+            </div>
+
+            <!-- testimonials 박스 -->
+            <div id="testimonials">
+                <h3>TESTIMONIALS</h3>
+               <div id="daumbox">
+                <img src="img/daum1.PNG" alt="daum">
+               </div>
+                <p>I've got lot experiences! I'm always impressed with the
+                    event. Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud
+                    exercitation ullamco laboris nisi ut aliquip. John, Customer</p>
+               <div id="daumbox">      
+                <img src="img/daum2.PNG" alt="daum">
+               </div>    
+            </div>
+
+            <!-- popular 박스 -->
+            <div id="popular">
+                <h3>POPULAR</h3>
+                <div id="popu">
+                    <img src="img/atist-image-1.jpg" alt="등장인물">
+                    <div id="popu1">
+                        <h4>How to Sell Digital Product</h4>
+                        <h6>Frau Power</h6>
+                        <p>May 31, 2021 - 2 Comments</p>
+                    </div>
+                </div>
+                <div id="popu">
+                    <img src="img/atist-image-3.jpg" alt="등장인물">
+                    <div id="popu1">
+                        <h4>Better User Interface</h4>
+                        <h6>Polly Lo</h6>
+                        <p>May 30, 2021 - 2 Comments</p>
+                    </div>
+                </div>
+                <div id="popu">
+                    <img src="img/atist-image-5.jpg" alt="등장인물">
+                    <div id="popu1">
+                        <h4>Experts Web Design Tips</h4>
+                        <h6>The Frtklles</h6>
+                        <p>May 29, 2021 - 2 Comments</p>
+                    </div>
+                </div>
+                <div id="popu">
+                    <img src="img/atist-image-6.jpg" alt="등장인물">
+                    <div id="popu1">
+                        <h4>Avoid These Erros In Ul Design</h4>
+                        <h6>Alan Smith</h6>
+                        <p>May 28, 2021 - 2 Comments</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- tags 박스 -->
+            <div id="tags">
+                <h3>TAGS</h3>
+                <div id="tag1">
+                    <div id="tagbox"><h5>Art</h5></div>
+                    <div id="tagbox"><h5>Application</h5></div>
+                    <div id="tagbox"><h5>Design</h5></div>
+                    <div id="tagbox"><h5>Entertainment</h5></div>
+                </div>
+
+                <div id="tag2">
+                    <div id="tagbox"><h5>Internet</h5></div>
+                    <div id="tagbox"><h5>Marketing</h5></div>
+                    <div id="tagbox"><h5>Multipurpose</h5></div>
+                    <div id="tagbox"><h5>Music</h5></div>
+                </div>
+
+                <div id="tag3">
+                    <div id="tagbox"><h5>Print</h5></div>
+                    <div id="tagbox"><h5>Programming</h5></div>
+                    <div id="tagbox"><h5>Responsive</h5></div>
+                    <div id="tagbox"><h5>Website</h5></div>
+                </div>
+            </div>
+
+            <!-- letter 박스 -->
+            <div id="letter">
+                <h3>LETTER</h3>
+               <div id="letterbox"> 
+                <input type="email" name="email" placeholder="Enter your Email...">
+                <button>click</button>
+               </div>    
+            </div>
+
+            <!-- insta 박스 -->
+            <div id="insta">
+                <h3>INSTAGRAM</h3>
+                <div id="instabox">
+                    <div id="instabox1">
+                        <img src="img/insta_box1.jpg" alt="박스">
+                        <div id="text12">
+                            <img src="img/instagram-256.webp" alt="인스타로고">
+                        </div>
+                    </div>
+                    <div id="instabox1">
+                        <img src="img/insta_box2.jpg" alt="박스">
+                        <div id="text12">
+                            <img src="img/instagram-256.webp" alt="인스타로고">
+                        </div>
+                    </div>
+                    <div id="instabox1">
+                        <img src="img/insta_box3.jpg" alt="박스">
+                        <div id="text12">
+                            <img src="img/instagram-256.webp" alt="인스타로고">
+                        </div>
+                    </div>
+                    <div id="instabox1">
+                        <img src="img/insta_box4.jpg" alt="박스">
+                        <div id="text12">
+                            <img src="img/instagram-256.webp" alt="인스타로고">
+                        </div>
+                    </div>
+                    <div id="instabox1">
+                        <img src="img/insta_box5.jpg" alt="박스">
+                        <div id="text12">
+                            <img src="img/instagram-256.webp" alt="인스타로고">
+                        </div>
+                    </div>
+                    <div id="instabox1">
+                        <img src="img/insta_box6.jpg" alt="박스">
+                        <div id="text12">
+                            <img src="img/instagram-256.webp" alt="인스타로고">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</main>
+
+<footer>
+    <div id="finlogo">
+        <div id="finlogo1">
+            <img src="img/finlogo.png" alt="마지막로고">
+        </div>
+        <div id="finlogo2">
+            <div id="artibox">
+                <img src="img/atist-image-1.jpg" alt="가수">
+                <div id="text12">
+                    <img src="img/instagram-256.webp" alt="인스타로고">
+                </div>
+            </div>
+    
+            <div id="artibox">
+                <img src="img/atist-image-2.jpg" alt="가수">
+                <div id="text12">
+                    <img src="img/instagram-256.webp" alt="인스타로고">
+                </div>
+            </div>
+    
+            <div id="artibox">
+                <img src="img/atist-image-3.jpg" alt="가수">
+                <div id="text12">
+                    <img src="img/instagram-256.webp" alt="인스타로고">
+                </div>
+            </div>
+    
+            <div id="artibox">
+                <img src="img/atist-image-4.jpg" alt="가수">
+                <div id="text12">
+                    <img src="img/instagram-256.webp" alt="인스타로고">
+                </div>
+            </div>
+    
+            <div id="artibox">
+                <img src="img/atist-image-5.jpg" alt="가수">
+                <div id="text12">
+                    <img src="img/instagram-256.webp" alt="인스타로고">
+                </div>
+            </div>
+    
+            <div id="artibox">
+                <img src="img/atist-image-6.jpg" alt="가수">
+                <div id="text12">
+                    <img src="img/instagram-256.webp" alt="인스타로고">
+                </div>
+            </div>
+        </div>
+    
+        <div id="finlogo3">
+    
+            <div id="finbox">
+                <h5>Copyright @ Qode Interactive</h5>
+            </div>
+            
+            <div id="finbox">
+                <h5>#NeoBeat #your sound</h5>
+            </div>
+    
+        </div>
+    
+    </div>
+</footer>
+</body>
+</html>
